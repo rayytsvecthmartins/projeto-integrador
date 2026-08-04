@@ -1,0 +1,2430 @@
+/*======================================================
+                RESET
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#FFFDF7;
+
+    color:#3f3f3f;
+
+    overflow-x:hidden;
+
+}
+
+/*======================================================
+                CORES
+======================================================*/
+
+:root{
+
+    --rosa:#ff6db7;
+
+    --rosa-claro:#ffd5ea;
+
+    --amarelo:#ffd84d;
+
+    --verde:#b9ea52;
+
+    --azul:#63b6ff;
+
+    --azul-escuro:#3d73ff;
+
+    --branco:#ffffff;
+
+    --cinza:#5d5d5d;
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/*======================================================
+                TITULOS
+======================================================*/
+
+h1,h2,h3{
+
+    font-family:'Fredoka',cursive;
+
+}
+
+.titulo{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.titulo span{
+
+    display:inline-block;
+
+    background:var(--rosa);
+
+    color:white;
+
+    padding:8px 20px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.titulo h2{
+
+    font-size:2.8rem;
+
+    color:#333;
+
+}
+
+.subtitulo{
+
+    margin-top:20px;
+
+    color:#666;
+
+    max-width:750px;
+
+    margin-inline:auto;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+                HEADER
+======================================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    padding:18px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+
+    z-index:999;
+
+}
+
+.logo h2{
+
+    color:var(--azul-escuro);
+
+    font-size:1.7rem;
+
+}
+
+.menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--rosa);
+
+}
+
+/*======================================================
+                HERO
+======================================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:150px 8% 90px;
+
+    gap:60px;
+
+}
+
+.hero-texto{
+
+    flex:1;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    background:var(--verde);
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    line-height:90%;
+
+    color:var(--azul-escuro);
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:40px;
+
+}
+
+.hero-imagem{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.hero-imagem img{
+
+    width:100%;
+
+    max-width:600px;
+
+    animation:flutuar 4s ease-in-out infinite;
+
+}
+
+/*======================================================
+                BOTÕES
+======================================================*/
+
+.hero-botoes{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    background:var(--rosa);
+
+    color:white;
+
+    text-decoration:none;
+
+    border:none;
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+    background:#ff4ea7;
+
+}
+
+.btn-secundario{
+
+    background:var(--amarelo);
+
+    color:#333;
+
+    text-decoration:none;
+
+    border:none;
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-secundario:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/*======================================================
+                ONDAS
+======================================================*/
+
+.ondas{
+
+    position:relative;
+
+    width:100%;
+
+    height:140px;
+
+    overflow:hidden;
+
+    margin-top:-30px;
+
+}
+
+.onda1,
+.onda2,
+.onda3{
+
+    position:absolute;
+
+    width:200%;
+
+    height:180px;
+
+    border-radius:45%;
+
+    animation:onda 14s linear infinite;
+
+}
+
+.onda1{
+
+    background:var(--azul);
+
+    opacity:.35;
+
+}
+
+.onda2{
+
+    background:var(--rosa);
+
+    opacity:.25;
+
+    animation-duration:18s;
+
+}
+
+.onda3{
+
+    background:var(--verde);
+
+    opacity:.2;
+
+    animation-duration:22s;
+
+}
+
+/*======================================================
+                SOBRE
+======================================================*/
+
+.sobre{
+
+    padding:120px 8%;
+
+}
+
+.cards-sobre{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.card h3{
+
+    color:var(--azul-escuro);
+
+    margin-bottom:20px;
+
+    font-size:1.5rem;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+                ANIMAÇÕES
+======================================================*/
+
+@keyframes flutuar{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes onda{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+/*======================================================
+                    PROBLEMA
+======================================================*/
+
+.problema{
+
+    padding:120px 8%;
+
+    background:linear-gradient(180deg,#ffffff,#fff9fb);
+
+}
+
+.problema-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    margin-bottom:70px;
+
+}
+
+.problema-imagem img{
+
+    width:100%;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.problema-imagem img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.problema-texto p{
+
+    margin-bottom:25px;
+
+    color:#555;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+}
+
+.problema-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+}
+
+.mini-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    font-size:2.5rem;
+
+}
+
+.mini-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.mini-card:nth-child(1){
+
+    border-top:10px solid var(--azul);
+
+}
+
+.mini-card:nth-child(2){
+
+    border-top:10px solid var(--rosa);
+
+}
+
+.mini-card:nth-child(3){
+
+    border-top:10px solid var(--verde);
+
+}
+
+.mini-card h3{
+
+    margin:20px 0 15px;
+
+    font-size:1.4rem;
+
+    color:#333;
+
+}
+
+.mini-card p{
+
+    color:#666;
+
+    font-size:.96rem;
+
+    line-height:1.7;
+
+}
+
+/*======================================================
+                    OBJETIVOS
+======================================================*/
+
+.objetivos{
+
+    padding:120px 8%;
+
+}
+
+.objetivos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+}
+
+.objetivo-card{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:45px 35px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.objetivo-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,216,77,.15);
+
+    border-radius:50%;
+
+    top:-90px;
+
+    right:-90px;
+
+}
+
+.objetivo-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.objetivo-card:nth-child(1){
+
+    border-bottom:8px solid var(--amarelo);
+
+}
+
+.objetivo-card:nth-child(2){
+
+    border-bottom:8px solid var(--azul);
+
+}
+
+.objetivo-card:nth-child(3){
+
+    border-bottom:8px solid var(--rosa);
+
+}
+
+.objetivo-card:nth-child(4){
+
+    border-bottom:8px solid var(--verde);
+
+}
+
+.icone{
+
+    font-size:3.2rem;
+
+    margin-bottom:25px;
+
+}
+
+.objetivo-card h3{
+
+    margin-bottom:18px;
+
+    color:var(--azul-escuro);
+
+}
+
+.objetivo-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+                    SOLUÇÃO
+======================================================*/
+
+.solucao{
+
+    padding:120px 8%;
+
+    background:#fdfdff;
+
+}
+
+.solucao-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.solucao-imagem img{
+
+    width:100%;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.item-solucao{
+
+    background:white;
+
+    padding:28px;
+
+    margin-bottom:25px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    border-left:8px solid var(--rosa);
+
+}
+
+.item-solucao:nth-child(2){
+
+    border-left-color:var(--amarelo);
+
+}
+
+.item-solucao:nth-child(3){
+
+    border-left-color:var(--verde);
+
+}
+
+.item-solucao:nth-child(4){
+
+    border-left-color:var(--azul);
+
+}
+
+.item-solucao:hover{
+
+    transform:translateX(10px);
+
+}
+
+.item-solucao h3{
+
+    margin-bottom:15px;
+
+    color:#333;
+
+}
+
+.item-solucao p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+                EFEITOS DECORATIVOS
+======================================================*/
+
+.objetivos,
+.solucao,
+.problema{
+
+    position:relative;
+
+}
+
+.objetivos::after{
+
+    content:"⭐";
+
+    position:absolute;
+
+    font-size:3rem;
+
+    top:60px;
+
+    right:6%;
+
+    animation:flutuar 5s infinite;
+
+}
+
+.solucao::before{
+
+    content:"💧";
+
+    position:absolute;
+
+    font-size:3rem;
+
+    left:5%;
+
+    bottom:60px;
+
+    animation:flutuar 4s infinite;
+
+}
+
+.problema::before{
+
+    content:"☀️";
+
+    position:absolute;
+
+    right:7%;
+
+    top:80px;
+
+    font-size:3rem;
+
+    animation:flutuar 6s infinite;
+
+}
+/*======================================================
+                    ÓPTICA
+======================================================*/
+
+.optica{
+
+    padding:120px 8%;
+
+    background:linear-gradient(180deg,#fffdf7,#f7fcff);
+
+}
+
+.optica-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+.optica-card{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.optica-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    background:rgba(99,182,255,.12);
+
+    top:-90px;
+
+    right:-80px;
+
+}
+
+.optica-card:hover{
+
+    transform:translateY(-12px) rotate(-2deg);
+
+}
+
+.optica-card:nth-child(2)::before{
+
+    background:rgba(255,109,183,.15);
+
+}
+
+.optica-card:nth-child(3)::before{
+
+    background:rgba(185,234,82,.18);
+
+}
+
+.emoji{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.optica-card h3{
+
+    color:var(--azul-escuro);
+
+    margin-bottom:18px;
+
+    font-size:1.6rem;
+
+}
+
+.optica-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+/*======================================================
+                DISCO DE NEWTON
+======================================================*/
+
+.newton{
+
+    padding:120px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.newton-texto span{
+
+    display:inline-block;
+
+    background:var(--amarelo);
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.newton-texto h2{
+
+    font-size:2.8rem;
+
+    margin-bottom:25px;
+
+    color:var(--azul-escuro);
+
+}
+
+.newton-texto p{
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+    color:#666;
+
+}
+
+.newton-imagem{
+
+    text-align:center;
+
+}
+
+.newton-imagem img{
+
+    width:100%;
+
+    max-width:420px;
+
+    transition:.8s;
+
+}
+
+/*======================================================
+                CÂMARA ESCURA
+======================================================*/
+
+.camera-escura{
+
+    padding:120px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    background:#fffafc;
+
+}
+
+.camera-imagem img{
+
+    width:100%;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.camera-texto span{
+
+    display:inline-block;
+
+    background:var(--rosa);
+
+    color:white;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+}
+
+.camera-texto h2{
+
+    font-size:2.8rem;
+
+    color:var(--azul-escuro);
+
+    margin-bottom:25px;
+
+}
+
+.camera-texto p{
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+    color:#666;
+
+}
+
+/*======================================================
+                TABELA
+======================================================*/
+
+.comparacao{
+
+    padding:120px 8%;
+
+}
+
+.tabela{
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.linha{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+}
+
+.linha div{
+
+    padding:25px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.titulo-tabela{
+
+    background:var(--azul-escuro);
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+/*======================================================
+                ROBÓTICA
+======================================================*/
+
+.robotica{
+
+    padding:120px 8%;
+
+    background:#f9fdff;
+
+}
+
+.fluxograma{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.bloco{
+
+    background:white;
+
+    width:190px;
+
+    min-height:210px;
+
+    border-radius:28px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.bloco:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.icone-fluxo{
+
+    font-size:3.5rem;
+
+    margin-bottom:15px;
+
+}
+
+.bloco h3{
+
+    margin-bottom:15px;
+
+    color:var(--azul-escuro);
+
+}
+
+.bloco p{
+
+    font-size:.95rem;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+.seta{
+
+    font-size:2.8rem;
+
+    color:var(--rosa);
+
+    font-weight:bold;
+
+}
+
+/*======================================================
+                SIMULADOR
+======================================================*/
+
+.simulador{
+
+    padding:120px 8%;
+
+}
+
+.simulador-container{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.termometro{
+
+    width:90px;
+
+    height:430px;
+
+    border-radius:80px;
+
+    background:#ececec;
+
+    margin:auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#barraTemperatura{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:45%;
+
+    background:linear-gradient(
+
+    to top,
+
+    #ff4f4f,
+
+    #ffbd4a
+
+    );
+
+    transition:1s;
+
+}
+
+.painel{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+}
+
+#temperatura{
+
+    display:block;
+
+    font-size:4rem;
+
+    color:var(--azul-escuro);
+
+    font-family:'Fredoka';
+
+    margin:30px 0;
+
+}
+
+.botoes{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+#statusSistema{
+
+    margin-top:30px;
+
+    background:#f3f3f3;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    color:#666;
+
+}
+
+/*======================================================
+                CALCULADORA
+======================================================*/
+
+.economia{
+
+    padding:120px 8%;
+
+    background:#fffef8;
+
+}
+
+.calculadora{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.calculadora input{
+
+    width:100%;
+
+    margin:35px 0;
+
+}
+
+.resultado{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+}
+
+.resultado h2{
+
+    color:var(--verde);
+
+    font-size:2.2rem;
+
+}
+/*======================================================
+                    GALERIA
+======================================================*/
+
+.galeria{
+
+    padding:120px 8%;
+
+    background:#ffffff;
+
+}
+
+.galeria-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.galeria-grid img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.galeria-grid img:hover{
+
+    transform:scale(1.06) rotate(-2deg);
+
+}
+
+/*======================================================
+                    DADOS
+======================================================*/
+
+.dados{
+
+    padding:120px 8%;
+
+    background:linear-gradient(180deg,#f8fdff,#ffffff);
+
+}
+
+.dados-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.numero{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.numero:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.numero h1{
+
+    font-size:4rem;
+
+    color:var(--rosa);
+
+    margin-bottom:20px;
+
+}
+
+.numero p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+                    QUIZ
+======================================================*/
+
+.quiz{
+
+    padding:120px 8%;
+
+    background:#fffdf6;
+
+}
+
+.quiz-container{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:60px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.quiz-container h3{
+
+    font-size:2rem;
+
+    margin-bottom:35px;
+
+    color:var(--azul-escuro);
+
+}
+
+.quiz-btn{
+
+    width:100%;
+
+    margin:15px 0;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#f5f5f5;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.35s;
+
+}
+
+.quiz-btn:hover{
+
+    background:var(--azul);
+
+    color:white;
+
+    transform:translateX(10px);
+
+}
+
+#resultadoQuiz{
+
+    margin-top:30px;
+
+    font-weight:bold;
+
+    font-size:1.2rem;
+
+}
+
+/*======================================================
+                ACESSIBILIDADE
+======================================================*/
+
+.acessibilidade{
+
+    padding:120px 8%;
+
+}
+
+.acessibilidade-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+}
+
+.acess-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.acess-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.acess-card .icone{
+
+    font-size:3.5rem;
+
+    margin-bottom:20px;
+
+}
+
+.acess-card h3{
+
+    margin-bottom:15px;
+
+    color:var(--azul-escuro);
+
+}
+
+.acess-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+                    EQUIPE
+======================================================*/
+
+.equipe{
+
+    padding:120px 8%;
+
+    background:#fff9fc;
+
+}
+
+.equipe-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:35px;
+
+}
+
+.membro{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.membro:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.membro img{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:25px;
+
+    border:6px solid var(--rosa);
+
+}
+
+.membro h3{
+
+    margin-bottom:10px;
+
+    color:var(--azul-escuro);
+
+}
+
+.membro p{
+
+    color:#666;
+
+}
+
+/*======================================================
+                    CONTATO
+======================================================*/
+
+.contato{
+
+    padding:120px 8%;
+
+}
+
+.formulario{
+
+    max-width:750px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.formulario input,
+.formulario textarea{
+
+    width:100%;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#f5f5f5;
+
+    font-size:1rem;
+
+    font-family:Poppins,sans-serif;
+
+}
+
+.formulario textarea{
+
+    resize:none;
+
+}
+
+/*======================================================
+                    BOTÕES FIXOS
+======================================================*/
+
+.acessibilidade-fixa{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:999;
+
+}
+
+.acessibilidade-fixa button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:var(--azul-escuro);
+
+    color:white;
+
+    font-size:1.2rem;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.acessibilidade-fixa button:hover{
+
+    transform:scale(1.12);
+
+    background:var(--rosa);
+
+}
+
+/*======================================================
+                    FOOTER
+======================================================*/
+
+footer{
+
+    background:linear-gradient(135deg,var(--azul-escuro),#4d8cff);
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 8%;
+
+}
+
+.footer-container h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+}
+
+.footer-container p{
+
+    margin:10px 0;
+
+    opacity:.95;
+
+}
+
+.footer-linha{
+
+    width:180px;
+
+    height:4px;
+
+    background:var(--amarelo);
+
+    margin:30px auto;
+
+    border-radius:30px;
+
+}
+/*======================================================
+                RESPONSIVIDADE
+======================================================*/
+
+@media (max-width:1100px){
+
+.hero,
+.problema-container,
+.solucao-container,
+.newton,
+.camera-escura,
+.simulador-container{
+
+grid-template-columns:1fr;
+
+display:grid;
+
+text-align:center;
+
+}
+
+.hero{
+
+padding-top:170px;
+
+}
+
+.hero h1{
+
+font-size:3.8rem;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.termometro{
+
+margin-bottom:40px;
+
+}
+
+.fluxograma{
+
+flex-direction:column;
+
+}
+
+.seta{
+
+transform:rotate(90deg);
+
+font-size:2rem;
+
+}
+
+.resultado{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+@media (max-width:768px){
+
+section{
+
+padding:90px 6% !important;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.titulo h2{
+
+font-size:2.2rem;
+
+}
+
+.hero-botoes{
+
+justify-content:center;
+
+}
+
+.hero-imagem img{
+
+max-width:400px;
+
+}
+
+#temperatura{
+
+font-size:3rem;
+
+}
+
+.quiz-container{
+
+padding:35px;
+
+}
+
+.calculadora{
+
+padding:35px;
+
+}
+
+}
+
+
+
+@media (max-width:520px){
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+.logo h2{
+
+font-size:1.3rem;
+
+}
+
+.btn,
+.btn-secundario{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.membro img{
+
+width:140px;
+
+height:140px;
+
+}
+
+.termometro{
+
+height:320px;
+
+width:70px;
+
+}
+
+}
+
+
+
+/*======================================================
+                ANIMAÇÕES DE ENTRADA
+======================================================*/
+
+.card,
+.objetivo-card,
+.item-solucao,
+.optica-card,
+.bloco,
+.numero,
+.acess-card,
+.membro,
+.quiz-container,
+.calculadora{
+
+animation:aparecer .8s ease;
+
+}
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/*======================================================
+                HOVER GERAL
+======================================================*/
+
+img{
+
+transition:.4s;
+
+}
+
+img:hover{
+
+transform:scale(1.02);
+
+}
+
+
+
+/*======================================================
+                SCROLLBAR
+======================================================*/
+
+::-webkit-scrollbar{
+
+width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f4f4f4;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+
+180deg,
+
+var(--rosa),
+
+var(--azul)
+
+);
+
+border-radius:30px;
+
+}
+
+
+
+/*======================================================
+                SELEÇÃO
+======================================================*/
+
+::selection{
+
+background:var(--rosa);
+
+color:white;
+
+}
+
+
+
+/*======================================================
+                DECORAÇÕES
+======================================================*/
+
+body::before{
+
+content:"⭐";
+
+position:fixed;
+
+top:15%;
+
+left:3%;
+
+font-size:2rem;
+
+animation:flutuar 6s infinite;
+
+opacity:.4;
+
+pointer-events:none;
+
+}
+
+body::after{
+
+content:"💧";
+
+position:fixed;
+
+right:4%;
+
+bottom:18%;
+
+font-size:2.5rem;
+
+animation:flutuar 4s infinite;
+
+opacity:.35;
+
+pointer-events:none;
+
+}
+
+
+
+/*======================================================
+                FUNDO DECORATIVO
+======================================================*/
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+background:rgba(255,216,77,.25);
+
+border-radius:50%;
+
+right:-180px;
+
+top:-140px;
+
+z-index:-1;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:320px;
+
+height:320px;
+
+background:rgba(255,109,183,.18);
+
+border-radius:50%;
+
+left:-120px;
+
+bottom:-120px;
+
+z-index:-1;
+
+}
+
+
+
+/*======================================================
+                MODO ESCURO
+======================================================*/
+
+.dark{
+
+background:#1e1e1e;
+
+color:white;
+
+}
+
+.dark section{
+
+background:#1e1e1e !important;
+
+}
+
+.dark .card,
+.dark .mini-card,
+.dark .objetivo-card,
+.dark .item-solucao,
+.dark .optica-card,
+.dark .bloco,
+.dark .numero,
+.dark .calculadora,
+.dark .quiz-container,
+.dark .acess-card,
+.dark .membro,
+.dark .painel,
+.dark .formulario input,
+.dark .formulario textarea{
+
+background:#2c2c2c;
+
+color:white;
+
+}
+
+.dark p{
+
+color:#ddd !important;
+
+}
+
+.dark h1,
+.dark h2,
+.dark h3{
+
+color:white !important;
+
+}
+
+.dark .header{
+
+background:#262626;
+
+}
+
+.dark footer{
+
+background:#111;
+
+}
+
+
+
+/*======================================================
+                TRANSIÇÕES
+======================================================*/
+
+body,
+section,
+.card,
+button,
+input,
+textarea,
+header{
+
+transition:.35s;
+
+}
+
+
+
+/*======================================================
+                BOLHAS
+======================================================*/
+
+.bolha{
+
+position:fixed;
+
+bottom:-120px;
+
+width:25px;
+
+height:25px;
+
+background:rgba(99,182,255,.25);
+
+border-radius:50%;
+
+pointer-events:none;
+
+animation:subirBolha linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes subirBolha{
+
+0%{
+
+transform:translateY(0) scale(.6);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.4);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/*======================================================
+                FIM DO CSS
+======================================================*/
