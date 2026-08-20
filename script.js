@@ -969,6 +969,54 @@ console.log("✅ JavaScript carregado com sucesso!");
 
 console.log("🚀 Site pronto para apresentação!");
 
+/* =========================================
+   INTERAÇÃO DO SISTEMA DE AQUECIMENTO
+   ========================================= */
+
+const etapasSistema = document.querySelectorAll(".etapa-sistema");
+
+etapasSistema.forEach(etapa => {
+
+    etapa.addEventListener("click", () => {
+
+        const info = etapa.dataset.info;
+
+        let mensagem = "";
+
+        if (info === "sol") {
+
+            mensagem =
+                "☀️ A radiação solar fornece energia para o sistema. A luz incide sobre as placas e parte dessa energia é absorvida.";
+
+        }
+
+        if (info === "placa") {
+
+            mensagem =
+                "🟢 As placas utilizam materiais capazes de absorver a radiação. Cores mais escuras geralmente absorvem mais radiação visível, ajudando na conversão da energia luminosa em calor.";
+
+        }
+
+        if (info === "controle") {
+
+            mensagem =
+                "🔵 Sensores verificam a temperatura da água. O controlador pode acionar ou desligar o sistema de aquecimento conforme a temperatura programada.";
+
+        }
+
+        if (info === "piscina") {
+
+            mensagem =
+                "💧 O calor produzido é transferido para a água da piscina, mantendo uma temperatura mais confortável e permitindo maior utilização do espaço.";
+
+        }
+
+        alert(mensagem);
+
+    });
+
+});
+
 /*==================================================
                     FIM
 ==================================================*/
