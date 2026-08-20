@@ -2423,7 +2423,168 @@ opacity:0;
 
 }
 
+/* =========================================
+   ILUSTRAÇÃO DO SISTEMA DE AQUECIMENTO
+   ========================================= */
 
+.visual-sistema {
+    width: 100%;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.visual-titulo span {
+    font-size: 45px;
+}
+
+.visual-titulo h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 15px 0;
+}
+
+.visual-titulo p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 45px;
+}
+
+.sistema-ilustracao {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.svg-sistema {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+}
+
+/* Animação dos raios */
+
+.raios-luz {
+    animation: luzSolar 1.5s infinite ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes luzSolar {
+
+    0%, 100% {
+        opacity: 0.5;
+        transform: translateY(-5px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================
+   ETAPAS
+   ========================================= */
+
+.etapas-sistema {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.etapa-sistema {
+    border: none;
+    border-radius: 25px;
+    padding: 22px 15px;
+    background: #292929;
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.etapa-sistema:first-child {
+    border-top: 5px solid #FFBE26;
+}
+
+.etapa-sistema:nth-child(2) {
+    border-top: 5px solid #AEE63F;
+}
+
+.etapa-sistema:nth-child(3) {
+    border-top: 5px solid #3F72FF;
+}
+
+.etapa-sistema:nth-child(4) {
+    border-top: 5px solid #F65BAA;
+}
+
+.etapa-sistema:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.etapa-sistema:active {
+    transform: scale(0.96);
+}
+
+.etapa-sistema strong {
+    font-size: 1rem;
+}
+
+.etapa-sistema span {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .visual-sistema {
+        padding: 70px 4%;
+    }
+
+    .etapas-sistema {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .visual-sistema {
+        padding: 55px 15px;
+    }
+
+    .visual-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .visual-titulo p {
+        font-size: 0.95rem;
+    }
+
+    .etapas-sistema {
+        grid-template-columns: 1fr;
+    }
+
+    .etapa-sistema {
+        padding: 20px;
+    }
+
+}
 
 /*======================================================
                 FIM DO CSS
